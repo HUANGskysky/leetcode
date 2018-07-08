@@ -40,6 +40,8 @@ public class NO819_MostCommonWord {
      */
 //
     public static void main(String[] args) {
+        //更新一下
+        //并且更新于2018.7.8
         String paragraph=new String("Bob!");//hit a ball, the hit BALL flew far after it was hit.
         String[] banned=new String[]{"hit"};
         String res=mostCommonWord(paragraph,banned);
