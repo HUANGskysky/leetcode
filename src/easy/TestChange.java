@@ -5,6 +5,6 @@ package easy;
  */
 public class TestChange {
     public static void main(String[] args){
-        System.out.println("更新一下！");
+        System.out.println("更新一下吧吧吧");
     }
 }
