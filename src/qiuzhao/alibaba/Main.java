@@ -19,12 +19,13 @@ import java.util.Scanner;
  * @author Huangsky
  */
 public class Main {
-    // 起始点
+    // 快递员起始点
     static final Point START = new Point(0, 0);
-    // 记录最短路径（默认是“无限大”表示不可达）
+    // 记录最短路径，并初始化为无限大
     static int minPath = Integer.MAX_VALUE;
 
     public static void main(String[] args) {
+        //处理输入
         Scanner scanner = new Scanner(System.in);
         int num = Integer.parseInt(scanner.nextLine().trim());
         Point[] points = new Point[num];
@@ -34,7 +35,10 @@ public class Main {
         }
 
 
-        System.out.println(rangeAll(points, 0));
+        long start = System.currentTimeMillis();
+        System.out.println(caculator(points, 0));
+        long end = System.currentTimeMillis();
+        System.out.println("用时：" + (end - start) + "ms");  //测试用时
     }
 
     /**
@@ -43,23 +47,23 @@ public class Main {
      * @param points
      * @param n
      */
-    public static int rangeAll(Point[] points, int n) {
+    public static int caculator(Point[] points, int n) {
         if (n == points.length) {
-            // 计算这次排列的路径长度
+            // 计算本次全排列的路径长度
             int sum = points[0].getLength(START);
             for (int i = 1; i < points.length; i++) {
                 sum += points[i - 1].getLength(points[i]);
             }
-            //加上会终点的路径
+            // 加上到起始点的路径长度
             sum += points[points.length - 1].getLength(START);
-            // 记录最短长度
+            // 记录最短路径长度
             minPath = Math.min(minPath, sum);
             return minPath;
         }
         // 以下进行递归的全排列
         for (int i = n; i < points.length; i++) {
             swap(points, n, i);
-            rangeAll(points, n + 1);//递归
+            caculator(points, n + 1);//递归
             swap(points, n, i);
         }
         return minPath;
