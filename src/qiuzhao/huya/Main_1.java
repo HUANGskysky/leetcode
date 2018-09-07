@@ -9,7 +9,7 @@ public class Main_1 {
 
     public static void order(String[] a) {
         for (int i = 0; i < a.length; i++) {
-            
+
         }
 
     }
