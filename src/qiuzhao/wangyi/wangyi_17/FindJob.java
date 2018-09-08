@@ -60,8 +60,8 @@ public class FindJob {
 
         for (int i = 0; i < list.size(); i++) {
             Iterator iter = map.entrySet().iterator();
+            salary.add(Integer.MIN_VALUE);
             while (iter.hasNext()) {
-                salary.add(Integer.MIN_VALUE);
                 Map.Entry<Integer, Integer> it = (Map.Entry) iter.next();
                 Integer difficulty = it.getKey();
                 if (difficulty > list.get(i))
