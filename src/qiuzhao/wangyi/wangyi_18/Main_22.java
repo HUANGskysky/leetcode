@@ -6,6 +6,7 @@ import java.util.Scanner;
  * Created by Huangsky on 2018/9/8.
  */
 public class Main_22 {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int t = Integer.parseInt(scanner.nextLine());
@@ -20,6 +21,7 @@ public class Main_22 {
     }
 
     public static void method(int n, int k) {
+
         System.out.print("0 ");
         int c = n - k;
         if (k < 2 || n < 3) {
