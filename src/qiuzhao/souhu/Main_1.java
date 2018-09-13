@@ -5,6 +5,19 @@ import java.util.*;
 /**
  * Created by Huangsky on 2018/9/13.
  */
+
+/**
+ * 作者：WAK
+ * 链接：https://www.nowcoder.com/discuss/108802
+ * 来源：牛客网
+ * <p>
+ * 1题
+ * 兄弟串
+ * 通过交换两个字符能得到的串称为兄弟串，判断两个字符串是否为兄弟串
+ * AC
+ * 思路：判断两个字符串中相同位值不同的个数，将相应位置为*，若=2，则符合要求，
+ * 若！=2，则排序，若存在至少两个不为*的相同字符，则也符合要求
+ */
 public class Main_1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

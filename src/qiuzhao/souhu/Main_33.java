@@ -5,6 +5,13 @@ import java.util.Scanner;
 /**
  * Created by Huangsky on 2018/9/13.
  */
+
+/**
+ * 比较版本号大小
+ * 判断两个版本号大小
+ * AC
+ * 思路：将版本号补齐，直接比较字符串的大小
+ */
 public class Main_33 {
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);

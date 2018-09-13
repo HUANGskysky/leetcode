@@ -5,6 +5,16 @@ import java.util.Scanner;
 /**
  * Created by Huangsky on 2018/9/12.
  */
+
+/**
+ * 作者：zhudky
+ * 链接：https://www.nowcoder.com/discuss/108052
+ * 来源：牛客网
+ * <p>
+ * 第二题：有 a a + bb = c*c ，且，a、b、c互质，求满足 0<a<b<c<=N的（a,b,c）有多少组
+ * <p>
+ * 思路：a = jj - ii; b = 2ji; c = jj - ii; 则只有 j 和 i 满足互质且一个为奇数一个为偶数，则可得到一组满足题意的 a,b,c
+ */
 public class Main_2 {
 
     public static void main(String[] args) {
