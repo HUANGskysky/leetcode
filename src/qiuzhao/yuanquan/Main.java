@@ -27,7 +27,6 @@ public class Main {
     public static int evalRPN(String[] tokens) {
         Stack<Integer> s = new Stack<Integer>();
         for (int i = 0; i < tokens.length; i++) {
-
             if (tokens[i].equals("+")) {
                 int right = s.pop();
                 int left = s.pop();
