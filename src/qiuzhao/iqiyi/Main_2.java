@@ -20,7 +20,7 @@ public class Main_2 {
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt();
         System.out.println(getCount(N));
-       
+
     }
 
     public static int getCount(int N) {
